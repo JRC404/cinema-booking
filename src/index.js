@@ -4,13 +4,11 @@ let both = 300
 
 
 class order {
-    constructor( name, age, popcorn, hotDog, softDrink) {
-        this.name =name; 
+    constructor(name, age, food, drink) {
+        this.name = name; 
         this.age = age; 
-        this.popcorn = popcorn;
-        this.hotDog = hotDog;
-        this.softDrink = softDrink;
-
+        this.food = food;
+        this.drink = drink;
     } 
 
     price() {
@@ -26,12 +24,34 @@ class order {
         }
         else {
             return("Invaild age")
+        };
+    }
+    refreshmentsFood() {
+        if(this.food === "Twix") {
+            console.log(`Your choice is: ${this.food}`)
+        }
+        else if(this.food === "Carmac") {
+            console.log(`Your choice is: ${this.food}`)
+            }
+        else if(this.food === "Wispa") {
+            console.log(`Your choice is ${this.food}`)
+        }
+        else if(this.food === "Twirl") {
+            console.log(`Your choice is: ${this.food}`)
+        }
+    };
+    refreshmentsDrink() {
+        if (this.drink === "Coke") {
+            console.log(`You choice is: ${this.drink}`)
+        }
+        else if(this.drink === "Sprite") {
+            console.log(`Your choice is: ${this.drink}`)
+        }
+        else if(this.drink === "Water") {
+            console.log(`Your choice is: ${this.drink}`)
+        }
+        else if(this.drink === "Tango Ice Blast") {
+            console.log(`Your choice is: ${this.drink}`)
         }
     }
 }
-
-//* TEST CODE
-
-const newPerson = new order ("James", 67)
-
-console.log(newPerson.price())
