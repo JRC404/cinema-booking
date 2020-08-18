@@ -4,7 +4,7 @@ let both = 300
 
 
 class order {
-    constructor( name, age, food, drink) {
+    constructor(name, age, food, drink) {
         this.name = name; 
         this.age = age; 
         this.food = food;
