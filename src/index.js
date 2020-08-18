@@ -4,9 +4,10 @@ let both = 300
 
 
 class order {
-    constructor(name, age, food, drink) {
+    constructor(name, age, student, food, drink) {
         this.name = name; 
-        this.age = age; 
+        this.age = age;
+        this.student = student
         this.food = food;
         this.drink = drink;
     } 
@@ -21,20 +22,24 @@ class order {
 
 
     price() {
-        if (this.age <= 7) {
+        if(this.student == "no" && this.age <= 7) {
             return("Your child ticket price will be £3")
         }
-        else if (this.age >= 7 && this.age <= 65) {
+        else if (this.student == "no" && this.age >= 7 && this.age <= 65) {
                 return("Your adult ticket price will be £10")
         }
-        else if (this.age >= 65) { 
+        else if(this.student == "yes" && this.age >= 7 && this.age <=65) {
+            return("Your student price will be £6")
+        }
+        else if (this.student == "no" && this.age >= 65) { 
             return("Your senior ticket price will be £5")
 
         }
         else {
             return("Invaild age")
         };
-    }
+    } 
+
     refreshmentsFood() {
         if(this.food === "Twix") {
             console.log(`Your choice is: ${this.food}`)
