@@ -10,6 +10,15 @@ class order {
         this.food = food;
         this.drink = drink;
     } 
+    seats(seat) {
+        if(seat > 5){
+            console.log("Not enough remaining seats");
+        }else {
+            this.seat = seat;
+            console.log(this.seat);
+        }
+    };
+
 
     price() {
         if (this.age <= 7) {
