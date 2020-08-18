@@ -55,14 +55,3 @@ class order {
         }
     }
 }
-
-
-
-
-//* TEST CODE
-
-const newPerson = new order ("James", 67, "Twix", "Coke")
-
-console.log(newPerson.price())
-console.log(newPerson.refreshmentsFood())
-console.log(newPerson.refreshmentsDrink())
