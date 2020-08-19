@@ -3,52 +3,46 @@ let threeD = 150
 let both = 300
 
 let food = [{
-    name: "Twix", 
-    price: 1.50,
-},
-{
-    name: "Carmac",
-    price: 1.50
-},
-{
-    name: "Wispa",
-    price: 1.00,
-},
-{
-    name: "Twirl",
-    price: 5.00
-}
+        name: "Twix", 
+        price: 1.50,
+    },
+    {
+        name: "Carmac",
+        price: 1.50
+    },
+    {
+        name: "Wispa",
+        price: 1.00,
+    },
+    {
+        name: "Twirl",
+        price: 5.00
+    }
 ]
 
 let drink = [{
-    name: "Coke", 
-    price: 1.50,
-},
-{
-    name: "Sprite",
-    price: 1.50
-},
-{
-    name: "Water",
-    price: 1.00,
-},
-{
-    name: "Tango Ice Blast",
-    price: 5.00
-}
+        name: "Coke", 
+        price: 1.50,
+    },
+    {
+        name: "Sprite",
+        price: 1.50
+    },
+    {
+        name: "Water",
+        price: 1.00,
+    },
+    {
+        name: "Tango Ice Blast",
+        price: 5.00
+    }
 ]
 
-
-let filmList = ["Goodfellas", "Boy in the striped pyjamas", "Hamelton", "Frozen", "Mickey Mouse"]
-
-
 class order {
-    constructor(name, age, student, food, drink) {
+    constructor(name, age, student) {
         this.name = name; 
         this.age = age;
         this.student = student
-        this.food = food;
-        this.drink = drink;
     } 
     seats(seat) {
         if(seat > 5){
@@ -79,4 +73,3 @@ class order {
         };
     } 
 }
-
