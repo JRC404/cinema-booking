@@ -2,6 +2,7 @@ let twoD = 200
 let threeD = 150
 let both = 300
 
+
 class Order {
     constructor(name, age, student, food, drink, Films) {
         this.name = name; 
@@ -10,6 +11,7 @@ class Order {
         this.food = food;
         this.drink = drink;
         this.Films = Films;
+
     } 
     seats(seat) {
         if(seat > 5){
@@ -57,6 +59,7 @@ price() {
         };
     } 
 }
+
     
 const finalPrice = () => { 
     let total = 0;
@@ -71,3 +74,4 @@ for (const item of food) {
 }
 
 module.exports = order;
+
