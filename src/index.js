@@ -16,7 +16,7 @@ let food = [{
 },
 {
     name: "Twirl",
-    price: 5.00
+    price: 5.00 
 }
 ]
 

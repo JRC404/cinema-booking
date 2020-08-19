@@ -5,6 +5,8 @@
   expect(index.price).toBe(20);
 }); */
 
+
+
 const Order = require("../src/index");
 test('Your child ticket price will be £3', () => {
   const ticket = new Order ("James", 6, "no") 
