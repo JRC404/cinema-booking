@@ -2,42 +2,6 @@ let twoD = 200
 let threeD = 150
 let both = 300
 
-let food = [{
-    name: "Twix",
-    cost: 1.50,
-},
-{
-    name: "Carmac",
-    cost: 1.50
-},
-{
-    name: "Wispa",
-    cost: 1.00,
-},
-{
-    name: "Twirl",
-    cost: 5.00
-}
-]
-let drink = [{
-    name: "Coke",
-    cost: 1.50,
-},
-{
-    name: "Sprite",
-    cost: 1.50
-},
-{
-    name: "Water",
-    cost: 1.00,
-},
-{
-    name: "Tango Ice Blast",
-    cost: 5.00
-}
-]
-
-
 class Order {
     constructor(name, age, student, food, drink, Films) {
         this.name = name; 
