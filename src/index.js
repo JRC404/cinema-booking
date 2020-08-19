@@ -60,16 +60,16 @@ class order {
             console.log(`You are purchasing ${this.ticketsPurchased} tickets. Seats available in screen 1: ${screenOneSeats}. Seats available in screen 3: ${screenThreeSeats}`)
             screenOneSeats -= this.ticketsPurchased 
             screenThreeSeats -= this.ticketsPurchased
-            console.log(`After your purchase, seats now available in screen 1: ${screenOneSeats}. Seats now available in screen 3: ${screenThreeSeats}`)
+            return (`After your purchase, seats now available in screen 1: ${screenOneSeats}. Seats now available in screen 3: ${screenThreeSeats}`)
         }
         else if (this.ticketsPurchased<=5 && (screenTwoSeats >=5 || screenThreeSeats >=5) && this.filmType == "threeD"){
             console.log(`You are purchasing ${this.ticketsPurchased} tickets. Seats available in screen 2: ${screenTwoSeats}. Seats available in screen three: ${screenThreeSeats}`)
             screenTwoSeats -= this.ticketsPurchased 
             screenThreeSeats -= this.ticketsPurchased
-            console.log(`After your purchase, seats now available in screen 2: ${screenTwoSeats} seats now available in screen 3: ${screenThreeSeats}`)
+            return (`After your purchase, seats now available in screen 2: ${screenTwoSeats} seats now available in screen 3: ${screenThreeSeats}`)
         }
         else {
-            console.log("No seats available")
+            return ("No seats available")
         }
     }
 
