@@ -39,10 +39,12 @@ let drink = [{
 ]
 
 class order {
-    constructor(name, age, student) {
+    constructor(name, age, student, filmType, ticketsPurchased) {
         this.name = name; 
         this.age = age;
-        this.student = student
+        this.student = student;
+        this.filmType = filmType;
+        this.ticketsPurchased = ticketsPurchased;
     } 
     seats(seat) {
         if(seat > 5){
