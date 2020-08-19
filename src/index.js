@@ -20,42 +20,36 @@ class Order {
         }
     };
 
-
-    
 Films() {
     if(this.Films === "twoD") {
         for (let a = 0; a <= 200; a++) {
         return("This film is only shown on 2D screen.") }
     }
-
     else if (this.Films === "threeD") {
         for (let z = 0; z <= 150; z++) {
             return("This film is only shown on 3D screen.")}
     }
-
     else if (this.Films === "both") {
         for (let k = 0; k <= 300; k++) {
         return("This film is shown on 2D and 3D screen. Choice on you!")}
     }
-
-
 };
 
-    price() {
-        if (this.Films === "threeD") {
-            return(`Your ticket price will be ${this.student} + £4`)
+price() {
+    if (this.Films === "threeD") {
+        return(`Your ticket price will be ${this.student} + £4`)
         }
-        if(this.student == "no" && this.age <= 7) {
-            return("Your child ticket price will be £3")
+    if(this.student == "no" && this.age <= 7) {
+        return("Your child ticket price will be £3")
         }
-        else if (this.student == "no" && this.age >= 7 && this.age <= 65) {
-                return("Your adult ticket price will be £10")
+    else if (this.student == "no" && this.age >= 7 && this.age <= 65) {
+        return("Your adult ticket price will be £10")
         }
-        else if(this.student == "yes" && this.age >= 7 && this.age <=65) {
-            return("Your student price will be £6")
+    else if(this.student == "yes" && this.age >= 7 && this.age <=65) {
+        return("Your student price will be £6")
         }
-        else if (this.student == "no" && this.age >= 65) { 
-            return("Your senior ticket price will be £5")
+    else if (this.student == "no" && this.age >= 65) { 
+        return("Your senior ticket price will be £5")
 
         }
         else {
@@ -63,10 +57,7 @@ Films() {
         };
     } 
 }
-      
-
-
-
+    
 const finalPrice = () => { 
     let total = 0;
     for (let j = 0; j < 5; j++) {
@@ -75,10 +66,8 @@ const finalPrice = () => {
     return total; 
 }
 
- /* food. fo((food) => console.log(`You are buying: ${food.name} This costs: ${food.cost}`));  */
+for (const item of food) {
+    console.log (`You are buying : ${item.name} This cost : ${item.cost}`);
+}
 
- for (const item of food) {
-    console.log(`You are buying: ${item.name} This costs: ${item.cost}`);
- }
-
- module.exports = Order;
+module.exports = order;
