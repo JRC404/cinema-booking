@@ -2,14 +2,50 @@ let twoD = 200
 let threeD = 150
 let both = 300
 
+let food = [{
+    name: "Twix",
+    cost: 1.50,
+},
+{
+    name: "Carmac",
+    cost: 1.50
+},
+{
+    name: "Wispa",
+    cost: 1.00,
+},
+{
+    name: "Twirl",
+    cost: 5.00
+}
+]
+let drink = [{
+    name: "Coke",
+    cost: 1.50,
+},
+{
+    name: "Sprite",
+    cost: 1.50
+},
+{
+    name: "Water",
+    cost: 1.00,
+},
+{
+    name: "Tango Ice Blast",
+    cost: 5.00
+}
+]
 
-class order {
-    constructor(name, age, student, food, drink) {
+
+class Order {
+    constructor(name, age, student, food, drink, Films) {
         this.name = name; 
         this.age = age;
         this.student = student
         this.food = food;
         this.drink = drink;
+        this.Films = Films;
     } 
     seats(seat) {
         if(seat > 5){
@@ -21,7 +57,30 @@ class order {
     };
 
 
+    
+Films() {
+    if(this.Films === "twoD") {
+        for (let a = 0; a <= 200; a++) {
+        return("This film is only shown on 2D screen.") }
+    }
+
+    else if (this.Films === "threeD") {
+        for (let z = 0; z <= 150; z++) {
+            return("This film is only shown on 3D screen.")}
+    }
+
+    else if (this.Films === "both") {
+        for (let k = 0; k <= 300; k++) {
+        return("This film is shown on 2D and 3D screen. Choice on you!")}
+    }
+
+
+};
+
     price() {
+        if (this.Films === "threeD") {
+            return(`Your ticket price will be ${this.student} + £4`)
+        }
         if(this.student == "no" && this.age <= 7) {
             return("Your child ticket price will be £3")
         }
@@ -39,33 +98,23 @@ class order {
             return("Invaild age")
         };
     } 
-
-    refreshmentsFood() {
-        if(this.food === "Twix") {
-            console.log(`Your choice is: ${this.food}`)
-        }
-        else if(this.food === "Carmac") {
-            console.log(`Your choice is: ${this.food}`)
-            }
-        else if(this.food === "Wispa") {
-            console.log(`Your choice is ${this.food}`)
-        }
-        else if(this.food === "Twirl") {
-            console.log(`Your choice is: ${this.food}`)
-        }
-    };
-    refreshmentsDrink() {
-        if (this.drink === "Coke") {
-            console.log(`You choice is: ${this.drink}`)
-        }
-        else if(this.drink === "Sprite") {
-            console.log(`Your choice is: ${this.drink}`)
-        }
-        else if(this.drink === "Water") {
-            console.log(`Your choice is: ${this.drink}`)
-        }
-        else if(this.drink === "Tango Ice Blast") {
-            console.log(`Your choice is: ${this.drink}`)
-        }
-    }
 }
+      
+
+
+
+const finalPrice = () => { 
+    let total = 0;
+    for (let j = 0; j < 5; j++) {
+        total += price() + (food.cost()) + refreshmentsDrink();
+    }
+    return total; 
+}
+
+ /* food. fo((food) => console.log(`You are buying: ${food.name} This costs: ${food.cost}`));  */
+
+ for (const item of food) {
+    console.log(`You are buying: ${item.name} This costs: ${item.cost}`);
+ }
+
+ module.exports = Order;
