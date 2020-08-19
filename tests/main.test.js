@@ -6,6 +6,7 @@
 }); */
 
 const Order = require("../src/index");
+
 test(`asserting "name" is "Steven"`, () => {
   const bluemonday = new Order('Steven');
   expect(bluemonday.name).toBe("Steven");
@@ -17,3 +18,5 @@ test(`asserting "name" is "Steven" and age is "8"`, () => {
   expect(bluemonday.name).toBe("Steven");
   expect(bluemonday.age).toBe(8);
 });
+
+
