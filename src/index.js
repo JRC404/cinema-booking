@@ -38,14 +38,16 @@ let drink = [{
 }
 ]
 
+
 class Order {
-    constructor(name, age, student, food, drink, Films) {
+    constructor(name, age, student, food, drink, Films, ticketsPurchased) {
         this.name = name; 
         this.age = age;
         this.student = student
         this.food = food;
         this.drink = drink;
         this.Films = Films;
+        this.ticketsPurchased = ticketsPurchased;
     } 
 
 seats(seat) {
@@ -56,6 +58,29 @@ seats(seat) {
         console.log(this.seat);
         }
     };
+
+
+    numberOfSeatsLeft(){
+      let screenOneSeats = 200
+      let screenTwoSeats = 150
+      let screenThreeSeats = 300
+        if(this.ticketsPurchased<=5 && (screenOneSeats >=5 || screenThreeSeats >=5) && this.Films == "twoD"){
+            console.log(`You are purchasing ${this.ticketsPurchased} tickets. Seats available in screen 1: ${screenOneSeats}. Seats available in screen 3: ${screenThreeSeats}`)
+            screenOneSeats -= this.ticketsPurchased 
+            screenThreeSeats -= this.ticketsPurchased
+            return (`After your purchase, seats now available in screen 1: ${screenOneSeats}. Seats now available in screen 3: ${screenThreeSeats}`)
+        }
+        else if (this.ticketsPurchased<=5 && (screenTwoSeats >=5 || screenThreeSeats >=5) && this.Films == "threeD"){
+            console.log(`You are purchasing ${this.ticketsPurchased} tickets. Seats available in screen 2: ${screenTwoSeats}. Seats available in screen three: ${screenThreeSeats}`)
+            screenTwoSeats -= this.ticketsPurchased 
+            screenThreeSeats -= this.ticketsPurchased
+            return (`After your purchase, seats now available in screen 2: ${screenTwoSeats} seats now available in screen 3: ${screenThreeSeats}`)
+        }
+        else {
+            return ("No seats available")
+        }
+    }
+
 Films() {
     if(this.Films === "twoD") {
         for (let a = 0; a <= 200; a++) {
@@ -73,6 +98,7 @@ Films() {
 price() {
     if (this.Films === "threeD") {
         return(`Your ticket price will be ${this.student} + £4`)
+
         }
     if(this.student == "no" && this.age <= 7) {
         return("Your child ticket price will be £3")
