@@ -2,6 +2,25 @@ let twoD = 200
 let threeD = 150
 let both = 300
 
+let filmList = [{
+    name: "Goodfellas", 
+    screen: "twoD",
+},
+{
+    name: "Boy in the stripy pyjamas",
+    screen: "twoD",
+},
+{
+    name: "hamelot",
+    screen: "both",
+},
+{
+    name: "Tango Ice Blast",
+    screen: "threeD",
+}
+]
+
+
 let food = [{
     name: "Twix", 
     price: 1.50,
