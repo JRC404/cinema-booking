@@ -81,10 +81,6 @@ seats(seat) {
         }
     }
 
-    price() {
-        if(this.student == "no" && this.age <= 7) {
-            return("Your child ticket price will be £3")
-
 Films() {
     if(this.Films === "twoD") {
         for (let a = 0; a <= 200; a++) {
